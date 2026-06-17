@@ -8,8 +8,8 @@ A image editing application with a C++ Qt GUI frontend and Python image processi
    Brightness control (-100 to +100)
    Contrast control (-100 to +100)
    Black & White filter
- **Modern Qt GUI**
-   Multi-page interface (Splash screen → Login → Editor)
+ ** Qt GUI**
+   Multi page interface 
    Dockable side menu panel
    Maximized window layout
    Responsive image display with auto-scaling
@@ -20,7 +20,7 @@ A image editing application with a C++ Qt GUI frontend and Python image processi
    Throttled processing for smooth slider experience
 
 ## File Paths
-**Always use forward slashes (`/`) in image paths!**
+**Always use forward slashes (`/`) in image paths**
 
 correct : `C:/Users/Name/photo.jpg`  
 wrong : `C:\Users\Name\photo.jpg`
