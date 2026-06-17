@@ -34,4 +34,3 @@ wrong : `C:\Users\Name\photo.jpg`
 ## Setup
 ```bash
 pip install numpy pillow
-# Open .sln in Visual Studio then Build and Run
