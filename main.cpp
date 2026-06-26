@@ -36,7 +36,7 @@ void sideMenu( QMainWindow* window)
 		QDockWidget::DockWidgetMovable |
 		QDockWidget::DockWidgetFloatable);
 
-	// Create widget that will hold all menu items
+
 	QWidget* menuWidget = new QWidget();
 	QVBoxLayout* menuLayout = new QVBoxLayout(menuWidget);
 	menuLayout->setAlignment(Qt::AlignTop);
@@ -123,10 +123,9 @@ void sideMenu( QMainWindow* window)
 		QStringList args;
 		args << "C:/Users/Huzaifa Laghari/Desktop/final__]/QtWidgetsApplication/x64/Debug/image_processor.py";
 		args << currentImagePath;
-		args << QString::number(brightnessSlider->value());  // Brightness
-		args << QString::number(contrastSlider->value());    // Contrast
-		args << "0";  // No B&W
-		// Add this line BEFORE python->start()
+		args << QString::number(brightnessSlider->value());  
+		args << QString::number(contrastSlider->value());    
+		args << "0";  
 		python->setWorkingDirectory("C:/Users/Huzaifa Laghari/Desktop/final__]/QtWidgetsApplication/x64/Debug/");
 		python->start("C:/ana/python.exe", args);
 
@@ -145,8 +144,6 @@ void sideMenu( QMainWindow* window)
 		});
 
 
-
-	// ADD THIS after the brightness slider connection:
 	QObject::connect(contrastSlider, &QSlider::valueChanged, [=](int value) {
 		contrastValue->setText(QString::number(value));
 		throttleTimer->start();  
@@ -197,7 +194,7 @@ int main(int argc, char* argv[]) {
 
 
 
-	// page1
+
 
 	QWidget *Login_page = new QWidget;
 	Login_page->setStyleSheet(
@@ -266,7 +263,7 @@ int main(int argc, char* argv[]) {
 		Page1->addSpacing(1);
 		Page1->addWidget(Uploadimg_url);
 		QObject::connect(Uploadimg_url, &QPushButton::clicked, [=]() {
-			//page2
+	
 			QWidget *page2 = new QWidget;
 			QVBoxLayout* con2 = new QVBoxLayout(page2);
 			con2->setContentsMargins(0, 0, 0, 0);
